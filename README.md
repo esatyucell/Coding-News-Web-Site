@@ -1,0 +1,1 @@
+Projeyi Hala Geliştirme Aşmasındayım. Bu Proje , Yönetici Paneli bulunan , Kodlama Hakkında bir Haber Sitesidir. OOP ve MVC Yapısına uygun bir şekilde PHP kullanarak geliştiriyorum.
