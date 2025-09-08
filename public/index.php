@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
+
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -23,6 +25,8 @@ Route::add('order', 'Front\OrderController@index')->middleware(AuthMiddleware::c
 Route::add('order/detail/([0-9]+)', 'Front\OrderController@detail')->middleware(AuthMiddleware::class);
 Route::add('customer', 'Front\CustomerController@index')->middleware(AuthMiddleware::class);
 Route::add('uth/updatePasswordFront', 'Front\AuthController@updatePasswordFront')->middleware(AuthMiddleware::class);
+
+
 
 //Auth Route Yapısı
 Route::add('login', 'Front\AuthController@login');
@@ -69,8 +73,8 @@ Route::add('admin/categories/edit/([0-9]+)', 'Admin\CategoryController@edit');
 Route::add('admin/categories/update/([0-9]+)', 'Admin\CategoryController@update');
 Route::add('admin/categories/delete/([0-9]+)', 'Admin\CategoryController@delete');
 
-/* Product Route Yapısı
-{{Route::add('admin/products', 'Admin\ProductController@index');
+// Product Route Yapısı
+Route::add('admin/products', 'Admin\ProductController@index');
 Route::add('admin/products/create', 'Admin\ProductController@create');
 Route::add('admin/products/store', 'Admin\ProductController@store');
 Route::add('admin/products/edit/([0-9]+)', 'Admin\ProductController@edit');
@@ -79,8 +83,7 @@ Route::add('admin/products/delete/([0-9]+)', 'Admin\ProductController@delete');
 Route::add('admin/products/gallery/([0-9]+)', 'Admin\ProductController@gallery');
 Route::add('admin/products/gallery/add', 'Admin\ProductController@addGalleryImage');
 Route::add('admin/products/gallery/delete', 'Admin\ProductController@deleteGalleryImage');
-}}
-*/
+
 
 
 

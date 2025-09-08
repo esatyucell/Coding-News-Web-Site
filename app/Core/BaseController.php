@@ -5,10 +5,12 @@ namespace App\Core;
 use App\Models\SettingsModel;
 use App\Models\CategoryModel;
 
+
 class BaseController
 {
     protected $settings = [];
     protected $categories = [];
+    protected $cartItemCount = 0;
     protected $userId;
 
     /**
@@ -29,6 +31,8 @@ class BaseController
         // CategoryModel'den kategorileri al
         $categoryModel = new CategoryModel();
         $this->categories = $categoryModel->getActiveCategories();
+
+       
 
         // checkLogin metodunu renderAdmin içinde çağıracağız
     }
@@ -64,6 +68,7 @@ class BaseController
         // Settings verilerini $data içine dahil et
         $data['settings'] = $this->settings;
         $data['categories'] = $this->categories;
+        $data['cartItemCount'] = $this->cartItemCount;
 
         $data['session'] = $_SESSION;
 
@@ -79,7 +84,7 @@ class BaseController
     /**
      * Admin view render etme metodu
      *
-     * @param string $view Görünüm dosyası
+     * @param string $view Görünüm dosyasıw
      * @param array $data Görünüme aktarılacak veri
      */
     public function renderAdmin($view, $data = [])
