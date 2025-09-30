@@ -36,6 +36,7 @@ class ComposerStaticInite7f91bc32b13ff61a0d209bd7086057e
         array (
             'App\\Core\\' => 9,
             'App\\Controllers\\' => 16,
+            'App\\' => 4,
         ),
     );
 
@@ -75,6 +76,10 @@ class ComposerStaticInite7f91bc32b13ff61a0d209bd7086057e
         'App\\Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/Controllers',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

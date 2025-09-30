@@ -1,47 +1,15 @@
-</main>
-<footer class="footer">
-  	 <div class="container">
-  	 	<div class="row">
-  	 		<div class="footer-col">
-  	 			<h4>company</h4>
-  	 			<ul>
-  	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">our services</a></li>
-  	 				<li><a href="#">privacy policy</a></li>
-  	 				<li><a href="#">affiliate program</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>get help</h4>
-  	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li>
-  	 				<li><a href="#">payment options</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>online shop</h4>
-  	 			<ul>
-  	 				<li><a href="#">watch</a></li>
-  	 				<li><a href="#">bag</a></li>
-  	 				<li><a href="#">shoes</a></li>
-  	 				<li><a href="#">dress</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>follow us</h4>
-  	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
-  	 			</div>
-  	 		</div>
-  	 	</div>
-  	 </div>
-  </footer>
-
-</body>
-</html>
+     <div class="footer-basic">
+     <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

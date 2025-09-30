@@ -32,7 +32,11 @@ class BaseController
         $categoryModel = new CategoryModel();
         $this->categories = $categoryModel->getActiveCategories();
 
-       
+        // Sepetteki ürün sayısını al
+        if (isset($_SESSION['user_id'])) {
+            $this->userId = $_SESSION['user_id'];
+            
+        }
 
         // checkLogin metodunu renderAdmin içinde çağıracağız
     }
@@ -76,9 +80,9 @@ class BaseController
         extract($data);
 
         // Layout ve view dosyalarını dahil et
-        require_once __DIR__ . "/../../views/layouts/front/header.php";
+        require_once __DIR__ . "/../../views/layouts/header.php";
         require_once __DIR__ . "/../../views/$view.php";
-        require_once __DIR__ . "/../../views/layouts/front/footer.php";
+        require_once __DIR__ . "/../../views/layouts/footer.php";
     }
 
     /**
