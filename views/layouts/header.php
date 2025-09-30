@@ -16,13 +16,13 @@
 
 <!-- about -->
 <div class="about">
-   <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
+   <a class="bg_links social portfolio" href="https://github.com/esatyucell" target="_blank">
       <span class="icon"></span>
    </a>
-   <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
+   <a class="bg_links social dribbble" href="https://esatyucel.com" target="_blank">
       <span class="icon"></span>
    </a>
-   <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
+   <a class="bg_links social linkedin" href="https://www.linkedin.com/in/esat-yucel/" target="_blank">
       <span class="icon"></span>
    </a>
    <a class="bg_links logo"></a>
@@ -30,7 +30,7 @@
 <!-- end about -->
 
 <nav class="mainNav">
-   <div class="mainNav__logo">Logo</div>
+   <div class="mainNav__logo">Coding News</div>
    <div class="mainNav__links">
       <a href="" class="mainNav__link">About</a>
       <a href="" class="mainNav__link">Projects</a>
