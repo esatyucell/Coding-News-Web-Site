@@ -31,7 +31,7 @@ class SliderModel {
      * @return array Aktif Siderlar
      */
 
-     public function getActiveSiders() {
+     public function getActiveSliders() {
         $stmt = $this->db->query("SELECT * FROM sliders WHERE status = 1 ORDER BY sort_order ASC");
         return $stmt->fetchAll();
      }

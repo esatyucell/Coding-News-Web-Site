@@ -56,10 +56,8 @@
       </svg>
    </div>
 </nav>
-<header class="mainHeading">
-   <div class="mainHeading__content">
+
       
-   </div>
-</header>
+  
 
 <div><br> <br><br></div>
