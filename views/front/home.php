@@ -90,31 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
         <?php if (!empty($products)): ?>
           <?php foreach ($products as $product): ?>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="card h-100" role="group" aria-label="<?php echo htmlspecialchars($product['name']); ?>">
+              <div class="card h-100" role="group" aria-label="<?php echo htmlspecialchars($product['title']); ?>">
                 <div class="position-relative">
-                  <span class="badge-label" aria-hidden="true"><?php echo htmlspecialchars($product['tag']); ?></span>
                   <span class="badge-featured" aria-hidden="true">Öne Çıkan</span>
-                  <span class="badge-best-seller" aria-hidden="true"><?php echo htmlspecialchars($product['category_name']); ?></span>
-
-                  <img src="<?php echo htmlspecialchars($product['standard_image']); ?>" class="card-img-top img-300x300" alt="<?php echo htmlspecialchars($product['name']); ?>">
-                  <img src="<?php echo htmlspecialchars($product['hover_image']); ?>" class="card-img-top hover-img img-300x300" alt="<?php echo htmlspecialchars($product['name']); ?> Hover">
-
+                  <img src="<?php echo htmlspecialchars($product['thumbnail_url']); ?>" class="card-img-top img-300x300" alt="<?php echo htmlspecialchars($product['name']); ?>">
                   <i class="fas fa-heart favorite-icon" role="button" aria-label="Favorilere ekle" onclick="addToFavorites(this)"></i>
                 </div>
 
                 <div class="card-body d-flex flex-column">
-                  <h5 class="card-title"><?php echo htmlspecialchars($product['name']); ?></h5>
+                  <h5 class="card-title"><?php echo htmlspecialchars($product['title']); ?></h5>
                   <p class="card-text short-description"><?php echo htmlspecialchars($product['short_description']); ?></p>
 
                   <div class="d-flex gap-2 mt-3">
                     <a href="product/<?php echo htmlspecialchars($product['slug']); ?>" class="btn btn-secondary w-100" aria-label="Ürün detayları">Detaylar</a>
-
-                    <form action="/cart/add" method="post" class="m-0 w-100" aria-label="Sepete ekle formu">
-                      <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
-                      <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
-                      <input type="hidden" name="quantity" value="1">
-                      <button type="submit" class="btn btn-dark w-100" aria-label="Sepete ekle"><i class="fas fa-cart-plus" aria-hidden="true"></i><span class="ms-2">Sepete Ekle</span></button>
-                    </form>
                   </div>
                 </div>
               </div>

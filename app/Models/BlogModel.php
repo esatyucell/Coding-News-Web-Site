@@ -130,4 +130,33 @@ class BlogModel
         $name = str_replace($turkish, $english, $name);
         return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $name)));
     }
+
+    public function getFeaturedBlogPosts()
+{
+    $stmt = $this->db->query("
+        SELECT b.*, c.name AS category_name
+        FROM blogposts b
+        INNER JOIN categories c ON b.category_id = c.id
+        WHERE b.featured = 'featured' 
+          AND c.status = 1
+        ORDER BY b.featured DESC, b.created_at DESC
+    ");
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
+
+ public function getProductBySlugForFront($slug)
+    {
+        $stmt = $this->db->prepare("
+           SELECT b.*, c.name AS category_name
+FROM blogposts b
+INNER JOIN categories c ON b.category_id = c.id
+WHERE b.slug = ? 
+  AND c.status = 1;
+
+        ");
+        $stmt->execute([$slug]);
+        return $stmt->fetch();
+    }
+
+   
 }

@@ -51,4 +51,5 @@ class BlogController extends BaseController {
 
         $this->render('front/blog/detail', ['post' => $post]);
     }
+
 }
