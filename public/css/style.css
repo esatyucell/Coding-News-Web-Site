@@ -507,3 +507,233 @@ body {
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
+
+/* Search Form Genel Stil */
+.search-form {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.search-form form {
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(90, 200, 250, 0.3);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-form form:focus-within {
+  box-shadow: 0 0 25px rgba(90, 200, 250, 0.6);
+}
+
+/* Input */
+.search-form input[type="text"] {
+  border: none;
+  border-radius: 50px 0 0 50px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  outline: none;
+  flex: 1;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: background 0.3s;
+}
+
+.search-form input[type="text"]:focus {
+  background: #fff;
+}
+
+/* Buton */
+.search-form button {
+  border: none;
+  background: #5ac8fa;
+  color: #fff;
+  padding: 0 25px;
+  font-weight: 500;
+  border-radius: 0 50px 50px 0;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.search-form button:hover {
+  background: #40b3e6;
+  transform: scale(1.05);
+}
+
+.search-form button:active {
+  transform: scale(0.95);
+}
+
+/* Blog Container */
+.container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #81d4fa;
+  /* bebek mavisi */
+  margin-bottom: 0;
+}
+
+.container .fa-blog {
+  color: #b3e5fc;
+  /* ikon rengi uyumlu */
+  transition: transform 0.3s ease;
+}
+
+.container .fa-blog:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* Blog Card Tasarımı */
+.card {
+  background: #0d1117;
+  /* koyu zemin */
+  border: 1px solid rgba(129, 212, 250, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(129, 212, 250, 0.3);
+}
+
+/* Görsel */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(129, 212, 250, 0.3);
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #81d4fa;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.card-title:hover {
+  color: #e3f2fd;
+  /* hover’da mavileşsin */
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #b0bec5;
+  line-height: 1.5;
+}
+
+/* Buton */
+.card .btn {
+  background: linear-gradient(135deg, #4fc3f7, #0288d1);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card .btn:hover {
+  background: linear-gradient(135deg, #0288d1, #4fc3f7);
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.7);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.card-footer {
+  font-size: 0.8rem;
+  background: #0a0f14;
+  color: #90caf9;
+  border-top: 1px solid rgba(129, 212, 250, 0.2);
+  padding: 0.6rem 1rem;
+}
+
+/* Başlık */
+.container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0288d1;
+  /* koyu bebek mavisi */
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+.container h1:hover {
+  color: #4fc3f7;
+  /* hover → açık mavi */
+}
+
+/* İkon */
+.container .fa-blog {
+  color: #0288d1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.container .fa-blog:hover {
+  transform: rotate(-10deg) scale(1.1);
+  color: #4fc3f7;
+}
+
+/* Görsel */
+.img-fluid {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 2px solid rgba(79, 195, 247, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(79, 195, 247, 0.5);
+}
+
+/* Yayınlanma Tarihi */
+.text-muted.text-center {
+  font-size: 0.9rem;
+  color: #0288d1 !important;
+  /* bebek mavisi ton */
+  margin-bottom: 1.5rem;
+}
+
+/* İçerik Alanı */
+.content {
+  background: #f9f9f9;
+  /* açık zemin */
+  color: #111;
+  /* okunabilir siyah yazı */
+  padding: 2rem;
+  border-radius: 1rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(129, 212, 250, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.content:hover {
+  box-shadow: 0 10px 25px rgba(79, 195, 247, 0.2);
+}
+
+/* İçerik linkleri */
+.content a {
+  color: #0288d1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.content a:hover {
+  color: #4fc3f7;
+  text-shadow: 0 0 8px rgba(79, 195, 247, 0.4);
+}

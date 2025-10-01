@@ -1,3 +1,11 @@
+<div class="search-form" role="search" aria-label="Site içi arama">
+        <form action="/search" method="get" class="w-100 d-flex" onsubmit="return validateSearch()" novalidate>
+         
+          <input id="site-search" type="text" name="query" class="form-control" placeholder="Ne aramıştınız?" required minlength="3" aria-required="true" aria-label="Arama">
+          <button class="btn" type="submit" aria-label="Ara">Ara</button>
+        </form>
+      </div>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" aria-roledescription="carousel">
   <div class="carousel-inner">
     <?php if (!empty($sliders)): ?>
@@ -73,3 +81,47 @@ document.addEventListener('DOMContentLoaded', function() {
   counter.textContent = '1/' + total;
 });
 </script>
+
+ <section class="section bg-light mt-4 p-4 rounded">
+      <h2 class="text-center mb-3">Öne Çıkan Haberler</h2>
+      <p class="text-center mb-4 text-muted-small">En popüler ve en çok okunan haberlerimizi keşfedin.</p>
+
+      <div class="row g-4">
+        <?php if (!empty($products)): ?>
+          <?php foreach ($products as $product): ?>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card h-100" role="group" aria-label="<?php echo htmlspecialchars($product['name']); ?>">
+                <div class="position-relative">
+                  <span class="badge-label" aria-hidden="true"><?php echo htmlspecialchars($product['tag']); ?></span>
+                  <span class="badge-featured" aria-hidden="true">Öne Çıkan</span>
+                  <span class="badge-best-seller" aria-hidden="true"><?php echo htmlspecialchars($product['category_name']); ?></span>
+
+                  <img src="<?php echo htmlspecialchars($product['standard_image']); ?>" class="card-img-top img-300x300" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                  <img src="<?php echo htmlspecialchars($product['hover_image']); ?>" class="card-img-top hover-img img-300x300" alt="<?php echo htmlspecialchars($product['name']); ?> Hover">
+
+                  <i class="fas fa-heart favorite-icon" role="button" aria-label="Favorilere ekle" onclick="addToFavorites(this)"></i>
+                </div>
+
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title"><?php echo htmlspecialchars($product['name']); ?></h5>
+                  <p class="card-text short-description"><?php echo htmlspecialchars($product['short_description']); ?></p>
+
+                  <div class="d-flex gap-2 mt-3">
+                    <a href="product/<?php echo htmlspecialchars($product['slug']); ?>" class="btn btn-secondary w-100" aria-label="Ürün detayları">Detaylar</a>
+
+                    <form action="/cart/add" method="post" class="m-0 w-100" aria-label="Sepete ekle formu">
+                      <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                      <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
+                      <input type="hidden" name="quantity" value="1">
+                      <button type="submit" class="btn btn-dark w-100" aria-label="Sepete ekle"><i class="fas fa-cart-plus" aria-hidden="true"></i><span class="ms-2">Sepete Ekle</span></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p class="text-center w-100">Haber Bulunamadı.</p>
+        <?php endif; ?>
+      </div>
+    </section>
