@@ -1,3 +1,4 @@
+<br>
 <div class="search-form" role="search" aria-label="Site içi arama">
         <form action="/search" method="get" class="w-100 d-flex" onsubmit="return validateSearch()" novalidate>
          
