@@ -32,10 +32,10 @@
 <nav class="mainNav">
    <div class="mainNav__logo">Coding News</div>
    <div class="mainNav__links">
-      <a href="" class="mainNav__link">About</a>
-      <a href="" class="mainNav__link">Projects</a>
-      <a href="" class="mainNav__link">Team</a>
-      <a href="" class="mainNav__link">Contacts</a>
+      <a href="/" class="mainNav__link">Ana Sayfa</a>
+      <a href="/blog" class="mainNav__link">Haberler</a>
+      <a href="" class="mainNav__link">Takım</a>
+      <a href="" class="mainNav__link">İletişim</a>
    </div>
    <div class="mainNav__icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
