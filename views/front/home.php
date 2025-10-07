@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="card h-100" role="group" aria-label="<?php echo htmlspecialchars($product['title']); ?>">
                 <div class="position-relative">
                   <span class="badge-featured" aria-hidden="true">Öne Çıkan</span>
-                  <img src="<?php echo htmlspecialchars($product['thumbnail_url']); ?>" class="card-img-top img-300x300" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                  <img src="<?php echo htmlspecialchars($product['thumbnail_url']); ?>" class="card-img-top img-300x300" alt="<?php echo htmlspecialchars($product['title']); ?>">
                   <i class="fas fa-heart favorite-icon" role="button" aria-label="Favorilere ekle" onclick="addToFavorites(this)"></i>
                 </div>
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   <p class="card-text short-description"><?php echo htmlspecialchars($product['short_description']); ?></p>
 
                   <div class="d-flex gap-2 mt-3">
-                    <a href="product/<?php echo htmlspecialchars($product['slug']); ?>" class="btn btn-secondary w-100" aria-label="Ürün detayları">Detaylar</a>
+                    <a href="blog/<?php echo htmlspecialchars($product['slug']); ?>" class="btn btn-secondary w-100" aria-label="Ürün detayları">Detaylar</a>
                   </div>
                 </div>
               </div>

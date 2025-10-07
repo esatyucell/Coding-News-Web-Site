@@ -74,6 +74,7 @@
       <a href="/blog" class="mainNav__link">Haberler</a>
       <a href="" class="mainNav__link">Takım</a>
       <a href="" class="mainNav__link">İletişim</a>
+      <a href="" class="mainNav__link">Giriş Yap</a>
     </div>
     <div class="mainNav__icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

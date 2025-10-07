@@ -134,12 +134,22 @@ class BlogModel
     public function getFeaturedBlogPosts()
 {
     $stmt = $this->db->query("
-        SELECT b.*, c.name AS category_name
-        FROM blogposts b
-        INNER JOIN categories c ON b.category_id = c.id
-        WHERE b.featured = 'featured' 
-          AND c.status = 1
-        ORDER BY b.featured DESC, b.created_at DESC
+       SELECT 
+    id,
+    title,
+    slug,
+    content,
+    thumbnail_url,
+    published_at,
+    created_at,
+    updated_at,
+    featured,
+    category_id,
+    short_description
+FROM blogposts
+WHERE featured = 'featured'
+ORDER BY featured DESC, created_at DESC;
+
     ");
     return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
